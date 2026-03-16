@@ -42,8 +42,6 @@
             down_payment_txt = new TextBox();
             button1 = new Button();
             button2 = new Button();
-            panel1 = new Panel();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -148,7 +146,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(16, 14);
+            button1.Location = new Point(63, 379);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 12;
@@ -158,24 +156,13 @@
             // 
             // button2
             // 
-            button2.Location = new Point(617, 14);
+            button2.Location = new Point(647, 379);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 13;
             button2.Text = "Close";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.Gray;
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(button2);
-            panel1.Location = new Point(30, 377);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(719, 52);
-            panel1.TabIndex = 15;
-            panel1.Paint += panel1_Paint;
             // 
             // Form1
             // 
@@ -185,7 +172,8 @@
             BackColor = Color.FromArgb(192, 255, 255);
             CancelButton = button2;
             ClientSize = new Size(800, 450);
-            Controls.Add(panel1);
+            Controls.Add(button1);
+            Controls.Add(button2);
             Controls.Add(down_payment_txt);
             Controls.Add(intRateTxt);
             Controls.Add(loanTermTxt);
@@ -201,7 +189,6 @@
             Name = "Form1";
             Text = "Calculate Monthly Payment";
             Load += Form1_Load_1;
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -222,6 +209,5 @@
         public TextBox purchasePricetxt;
         private Button button1;
         private Button button2;
-        private Panel panel1;
     }
 }
